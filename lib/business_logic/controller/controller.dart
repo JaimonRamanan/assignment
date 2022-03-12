@@ -19,7 +19,7 @@ class Controller extends GetxController {
         'https://api-dev.itujar.com/customer/login',
         data: {"userName": userName, "password": password},
       ).then((response) async {
-        if (response.statusCode == 200) {
+        if (response.data['statusCode'] == 200) {
           customer = Customer.fromJson(response.data['data']);
           await Get.to(() => const ProfileScreen(),
               transition: Transition.fadeIn);

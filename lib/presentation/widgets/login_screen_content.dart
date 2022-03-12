@@ -69,9 +69,14 @@ class LoginScreenContent extends StatelessWidget {
   }
 
   void loginManagement(Controller controller) async {
-    await controller.login(
-      userName: controller.usernameController.text.trim(),
-      password: controller.passwordController.text.trim(),
-    );
+    if (controller.usernameController.text.isNotEmpty &&
+        controller.passwordController.text.isNotEmpty &&
+        controller.usernameController.text != '' &&
+        controller.passwordController.text != '') {
+      await controller.login(
+        userName: controller.usernameController.text.trim(),
+        password: controller.passwordController.text.trim(),
+      );
+    }
   }
 }
