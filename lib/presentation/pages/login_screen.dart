@@ -1,3 +1,4 @@
+import 'package:assignment/business_logic/controller/controller.dart';
 import 'package:assignment/presentation/widgets/common_card.dart';
 import 'package:assignment/presentation/widgets/gradient_container.dart';
 import 'package:assignment/presentation/widgets/login_screen_content.dart';
@@ -10,6 +11,7 @@ class LoginScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Get.put(Controller());
     return Scaffold(
       backgroundColor: Colors.white,
       resizeToAvoidBottomInset: true,
