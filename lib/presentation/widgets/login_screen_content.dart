@@ -74,8 +74,8 @@ class LoginScreenContent extends StatelessWidget {
         controller.usernameController.text != '' &&
         controller.passwordController.text != '') {
       await controller.login(
-        userName: controller.usernameController.text.trim(),
-        password: controller.passwordController.text.trim(),
+        userName: controller.usernameController.text,
+        password: controller.passwordController.text,
       );
     }
   }
